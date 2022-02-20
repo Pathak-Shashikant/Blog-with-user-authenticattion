@@ -30,10 +30,10 @@ login_manager.init_app(app)
 gravatar = Gravatar(app)
 # CONFIGURE TABLES
 
-uri = os.getenv("DATABASE_URL")  # or other relevant config var
-if uri and uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
-# rest of connection code using the connection string `uri`
+# uri = os.getenv("DATABASE_URL")  # or other relevant config var
+# if uri and uri.startswith("postgres://"):
+#     uri = uri.replace("postgres://", "postgresql://", 1)
+# # rest of connection code using the connection string `uri`
 
 class BlogPost(db.Model):
     __tablename__ = "blog_posts"
